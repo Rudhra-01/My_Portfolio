@@ -1,0 +1,90 @@
+.skills{
+    padding:100px 8%;
+    background:linear-gradient(135deg, #08111f, #0f172a, #08111f);
+    text-align:center;
+}
+
+.skills-title{
+    font-size:48px;
+    color:#22d3ee;
+    margin-bottom:10px;
+}
+
+.skills-subtitle{
+    color:#94a3b8;
+    margin-bottom:60px;
+    font-size:18px;
+}
+
+.hex-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:35px;
+    justify-items:center;
+}
+
+.hex-card{
+    width:150px;
+    height:170px;
+    clip-path:polygon(
+        25% 6.7%,
+        75% 6.7%,
+        100% 50%,
+        75% 93.3%,
+        25% 93.3%,
+        0% 50%
+    );
+
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(34,211,238,.25);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    backdrop-filter:blur(12px);
+
+    transition:.4s;
+    cursor:pointer;
+}
+
+.hex-card:hover{
+    transform:translateY(-15px) scale(1.08);
+    box-shadow:
+        0 0 20px #22d3ee,
+        0 0 50px rgba(34,211,238,.35);
+}
+
+.hex-icon{
+    font-size:48px;
+    margin-bottom:15px;
+    transition:.4s;
+}
+
+.hex-card:hover .hex-icon{
+    transform:rotate(10deg) scale(1.2);
+}
+
+.hex-card h3{
+    color:white;
+    font-size:17px;
+    font-weight:600;
+}
+
+@media(max-width:768px){
+
+.hex-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.hex-card{
+    width:130px;
+    height:150px;
+}
+
+.hex-icon{
+    font-size:40px;
+}
+
+}

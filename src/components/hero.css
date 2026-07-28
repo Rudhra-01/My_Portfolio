@@ -1,0 +1,245 @@
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #08111f, #0f172a, #08111f);
+  overflow: hidden;
+}
+
+/* ==========================================
+   BACKGROUND ANIMATION
+========================================== */
+
+.hero-bg span {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(34, 211, 238, 0.08);
+  animation: float 8s ease-in-out infinite;
+}
+
+.hero-bg span:nth-child(1) {
+  width: 350px;
+  height: 350px;
+  top: -120px;
+  left: -120px;
+}
+
+.hero-bg span:nth-child(2) {
+  width: 250px;
+  height: 250px;
+  bottom: 60px;
+  right: -80px;
+  animation-delay: 2s;
+}
+
+.hero-bg span:nth-child(3) {
+  width: 180px;
+  height: 180px;
+  top: 45%;
+  left: 70%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+
+}
+/* ==========================================
+   HERO CONTENT
+========================================== */
+.hero-content {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-tag {
+  display: inline-block;
+  color: #c6afd7;
+  border: 1px solid rgba(34, 211, 238, .3);
+  padding: 10px 20px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, .04);
+  margin-bottom: 30px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.hero-content h1 {
+  color: white;
+  font-size: 70px;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-content h1 b {
+  color: #ffffff;
+}
+
+.typing-text {
+  color: #d0ebea;
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  min-height: 50px;
+}
+
+.hero-content p {
+  max-width: 760px;
+  margin: 0 auto 40px;
+  color: #f3fbfd;
+  line-height: 1.9;
+  font-size: 18px;
+}
+
+.hero-content strong {
+  color: #efedbe;
+}
+/* ==========================================
+   BUTTONS
+========================================== */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .35s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ac8fe4, #3b82f6);
+  color: #08111f;
+}
+
+.btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(34, 211, 238, .35);
+}
+
+.btn-secondary {
+  border: 2px solid #bad1d4;
+  color: #22d3ee;
+}
+
+.btn-secondary:hover {
+  background: #22d3ee;
+  color: #2c0747;
+}
+
+/* ==========================================
+   SOCIAL ICONS
+========================================== */
+
+.hero-social {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.hero-social a {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 255, 255, .08);
+  color: #c3d6d9;
+  font-size: 22px;
+  transition: .35s;
+}
+
+.hero-social a:hover {
+  background: #22d3ee;
+  color: #08111f;
+  transform: translateY(-6px);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:1100px) {
+
+  .hero {
+    padding: 140px 8% 80px;
+  }
+
+  .hero-content h1 {
+    font-size: 56px;
+  }
+
+  .typing-text {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 17px;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .hero {
+    padding: 120px 20px 60px;
+  }
+
+  .hero-tag {
+    font-size: 14px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .typing-text {
+    font-size: 22px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 240px;
+  }
+
+}
