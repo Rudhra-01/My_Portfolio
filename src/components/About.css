@@ -270,3 +270,10 @@ justify-content:center;
 }
 
 }
+
+/* Section atmosphere: subtle photographic texture, kept behind content */
+.about {
+  background:
+    linear-gradient(110deg, rgba(5, 10, 22, .97), rgba(8, 17, 35, .91)),
+    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=75") center/cover fixed;
+}

@@ -1,5 +1,5 @@
 import "./About.css";
-import profile from "../assets/profile-rudhra.png";
+import profile from "../assets/linkedin_prf.png";
 import { FaGraduationCap, FaBriefcase, FaLaptopCode, FaArrowRight } from "react-icons/fa";
 
 const About = () => {

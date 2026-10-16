@@ -15,15 +15,12 @@ import { BsBarChartFill } from "react-icons/bs";
 
 const skills = [
   { name: "Python", icon: <SiPython />, color: "#FFD43B" },
-  { name: "SQL", icon: <FaDatabase />, color: "#00E5FF" },
   { name: "Power BI", icon: <BsBarChartFill />, color: "#F2C811" },
   { name: "FastAPI", icon: <SiFastapi />, color: "#00C58E" },
   { name: "React", icon: <SiReact />, color: "#61DAFB" },
   { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
   { name: "MySQL", icon: <SiMysql />, color: "#00758F" },
   { name: "PostgreSQL", icon: <SiPostgresql />, color: "#336791" },
-  { name: "Pandas", icon: <SiPandas />, color: "#A259FF" },
-  { name: "NumPy", icon: <SiNumpy />, color: "#4DABCF" },
   { name: "GitHub", icon: <SiGithub />, color: "#ffffff" },
 ];
 
