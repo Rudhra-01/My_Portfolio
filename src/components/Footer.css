@@ -1,56 +1,259 @@
-.footer{
-    background:linear-gradient(135deg, #08111f, #0f172a, #08111f);
-    padding:25px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-top:1px solid rgba(255,255,255,.08);
+
+/* ===========================
+   FOOTER SECTION
+=========================== */
+
+.footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 12px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: #050914;
+  border-top: 1px solid rgba(56, 189, 248, 0.25);
 }
 
-.footer p{
-    color:#b8c6d4;
-    font-size:15px;
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(4, 8, 20, 0.65),
+      rgba(5, 10, 24, 0.5),
+      rgba(2, 18, 61, 0.65)
+    ),
+    url("/src/assets/bg_porto.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.footer strong{
-    color:#22d3ee;
+.footer p {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
-.footer-icons{
-    display:flex;
-    gap:18px;
-    align-items:center;
+.footer strong {
+  color: #22d3ee;
+  font-weight: 700;
+}
+
+/* Footer social icons */
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .footer-icons a,
-.footer-icons button{
-    width:42px;
-    height:42px;
-    border:none;
-    border-radius:50%;
-    background:#12233f;
-    color:#22d3ee;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    cursor:pointer;
-    transition:.3s;
-    text-decoration:none;
+.footer-icons button {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 50%;
+  background: rgba(8, 20, 40, 0.9);
+  color: #22d3ee;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease,
+    transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .footer-icons a:hover,
-.footer-icons button:hover{
-    background:#22d3ee;
-    color:#08111f;
-    transform:translateY(-4px);
+.footer-icons button:hover {
+  background: #22d3ee;
+  color: #08111f;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.3);
 }
 
-@media(max-width:768px){
-
-.footer{
-    flex-direction:column;
-    gap:15px;
-    text-align:center;
+.footer-icons a:focus-visible,
+.footer-icons button:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 3px;
 }
 
+/* ===========================
+   CONTACT SECTION
+=========================== */
+
+.contact-container {
+  width: 100%;
+  max-width: 1050px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px 18px;
+}
+
+/* Two compact boxes */
+
+.contact-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 18px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Contact Information + Connect With Me */
+
+.contact-info,
+.contact-social {
+  min-width: 0;
+  height: auto;
+  min-height: 0;
+  padding: 16px 18px;
+  box-sizing: border-box;
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 16px;
+
+  /* Subtle background inside both boxes */
+  background: linear-gradient(
+    145deg,
+    rgba(12, 27, 49, 0.96),
+    rgba(5, 14, 30, 0.96)
+  );
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Subtle hover effect */
+
+.contact-info:hover,
+.contact-social:hover {
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 0 8px 22px rgba(8, 145, 178, 0.1);
+}
+
+/* Compact headings inside the boxes */
+
+.contact-info h3,
+.contact-social h3 {
+  margin: 0 0 12px;
+  color: #e2e8f0;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+/* Reduce paragraph spacing */
+
+.contact-info p,
+.contact-social p {
+  margin: 8px 0;
+  color: #cbd5e1;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Keep links neat */
+
+.contact-info a,
+.contact-social a {
+  overflow-wrap: anywhere;
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 12px 5%;
+  }
+
+  .contact-container {
+    padding: 18px 15px;
+  }
+
+  .contact-content {
+    gap: 14px;
+  }
+
+  .contact-info,
+  .contact-social {
+    padding: 15px;
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 5%;
+    text-align: center;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+
+  .contact-container {
+    padding: 16px 14px;
+  }
+
+  .contact-content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .contact-info,
+  .contact-social {
+    padding: 14px;
+    border-radius: 14px;
+  }
+}
+
+/* Small screens */
+
+@media (max-width: 360px) {
+  .footer-icons {
+    gap: 8px;
+  }
+
+  .footer-icons a,
+  .footer-icons button {
+    width: 31px;
+    height: 31px;
+    font-size: 13px;
+  }
+
+  .contact-info,
+  .contact-social {
+    padding: 12px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-icons a,
+  .footer-icons button,
+  .contact-info,
+  .contact-social {
+    transition: none;
+  }
 }

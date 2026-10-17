@@ -1,7 +1,7 @@
 import "./About.css";
 import profile from "../assets/linkedin_prf.png";
 import { FaGraduationCap, FaBriefcase, FaLaptopCode, FaArrowRight } from "react-icons/fa";
-
+<section id="about" className="about-section"></section>
 const About = () => {
   return (
     <section className="about" id="about">
@@ -34,7 +34,7 @@ const About = () => {
           </p>
 
           <p>
-            I enjoy turning data into meaningful insights that help solve real-world business problems. Whether it's analysing data, building dashboards, or developing machine learning solutions using Python, SQL, Power BI, and Business Intelligence, I enjoy creating practical solutions while continuously learning and improving my skills.
+            Exploring data, uncovering patterns, and building practical solutions with analytics and machine learning.
           </p>
 
           <div className="about-cards">
@@ -52,6 +52,7 @@ const About = () => {
               <div>
                 <h4>Internship</h4>
                 <p>AI / ML Intern</p>
+                <p>Python With AI Intern</p>
               </div>
             </div>
 

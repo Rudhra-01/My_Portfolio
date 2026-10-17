@@ -216,7 +216,7 @@ export default function Projects() {
 
             <div className="project-buttons">
               <a
-                href="https://github.com/Rudhra-01/Chocolate-sales-dashboard"
+                href="https://github.com/Rudhra-01/Starbucks_Dashboard.git"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="github-btn"

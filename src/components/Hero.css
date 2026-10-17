@@ -40,8 +40,7 @@
       transparent 38%,
       rgba(5, 9, 20, 0.18) 100%
     ),
-    url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2200&q=85");
-  background-position: center;
+    url("../assets/bg.png");
   background-size: cover;
   transform: scale(1.025);
   animation: hero-image-drift 22s ease-in-out infinite alternate;
@@ -152,6 +151,10 @@
   font-weight: 800;
   overflow-wrap: break-word;
 }
+.hero h1 {
+  font-size: 2.5rem;
+}
+
 
 .hero-content h1 span {
   display: block;

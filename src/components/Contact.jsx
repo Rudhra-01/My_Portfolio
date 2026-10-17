@@ -1,109 +1,118 @@
+
+import React from "react";
 import "./Contact.css";
-import {
-  FaEnvelope,
-  FaPhoneAlt,
-  FaMapMarkerAlt,
-  FaGithub,
-  FaLinkedin,
-  FaDownload,
-} from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <section className="contact" id="contact">
-      <div className="contact-title">
-
-        <span>Get In Touch</span>
-
-        <h2>Let's Work Together</h2>
-
-        <p>
-          I'm always interested in Data Analytics, Business Analytics,
-          Machine Learning, and AI opportunities. Feel free to reach out!
-        </p>
-
-      </div>
-
+    <section className="contact-section" id="contact">
       <div className="contact-container">
 
-        {/* LEFT */}
+        {/* Contact Section Heading */}
+        <div className="contact-heading">
+          <span className="contact-tag">GET IN TOUCH</span>
 
-        <div className="contact-card">
+          <h2>
+            Contact <span>Me</span>
+          </h2>
 
-          <h3>Contact Information</h3>
+          <p>
+            Let's connect and explore opportunities together.
+          </p>
+        </div>
 
-          <div className="contact-item">
-            <FaEnvelope />
-            <div>
-              <h4>Email</h4>
-              <p>rudhra.roopini.p.22ds27@gmail.com</p>
+        {/* Contact Cards */}
+        <div className="contact-content">
+
+          {/* Box 1: Contact Information */}
+          <div className="contact-card contact-info-card">
+            <h3>
+              <span className="contact-icon">✉</span>
+              Contact Information
+            </h3>
+
+            {/* Email */}
+            <div className="contact-detail">
+              <span className="detail-label">Email</span>
+
+              <a href="mailto:rudhra.roopini.p.22ds27@gmail.com">
+                rudhra.roopini.p.22ds27@gmail.com
+              </a>
             </div>
-          </div>
 
-          <div className="contact-item">
-            <FaPhoneAlt />
-            <div>
-              <h4>Phone</h4>
-              <p>+91 90808 01733</p>
+            {/* Phone */}
+            <div className="contact-detail">
+              <span className="detail-label">Phone</span>
+
+              <a href="tel:+919080801733">
+                +91 9080801733
+              </a>
             </div>
-          </div>
 
-          <div className="contact-item">
-            <FaMapMarkerAlt />
-            <div>
-              <h4>Location</h4>
+            {/* Location */}
+            <div className="contact-detail">
+              <span className="detail-label">Location</span>
+
               <p>Chennai, Tamil Nadu, India</p>
             </div>
+
+            {/* Career Focus */}
+            <div className="contact-detail">
+              <span className="detail-label">Career Focus</span>
+
+              <p>Data Analytics · Business Analysis</p>
+            </div>
           </div>
 
-        </div>
+          {/* Box 2: Connect With Me */}
+          <div className="contact-card contact-connect-card">
+            <h3>
+              <span className="contact-icon">↗</span>
+              Connect With Me
+            </h3>
 
-        {/* RIGHT */}
-
-        <div className="contact-card">
-
-          <h3>Connect With Me</h3>
-
-          <div className="social-buttons">
-
-            <a
-              href="https://github.com/Rudhra-01"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaGithub />
-              GitHub
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/rudhra-roopini-p-b4b7032b3/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaLinkedin />
-              LinkedIn
-            </a>
-
-            <a href="/Resume.pdf" download>
-              <FaDownload />
-              Download Resume
-            </a>
-
-          </div>
-
-          <div className="contact-message">
-
-            <h4>Open to Opportunities</h4>
-
-            <p>
-              I'm currently seeking internships and full-time opportunities in
-              Data Analytics, Business Analytics, Machine Learning, and AI.
+            <p className="connect-description">
+              Connect with me to discuss projects, share ideas,
+              or explore professional opportunities.
             </p>
 
+            {/* Social Links */}
+            <div className="contact-links">
+
+              <a
+                href="https://www.linkedin.com/in/rudhra-roopini-p-b4b7032b3/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit my LinkedIn profile"
+              >
+                LinkedIn <span>↗</span>
+              </a>
+              <div>
+              <a
+                href="https://github.com/Rudhra-01"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit my GitHub profile"
+              >
+                GitHub <span>↗</span>
+              </a>
+              </div>
+              <a
+                href="mailto:rudhra.roopini.p.22ds27@gmail.com"
+                aria-label="Send me an email"
+              >
+                Email <span>↗</span>
+              </a>
+
+            </div>
+
+            {/* Availability Status */}
+            <p className="availability">
+              <span className="availability-dot"></span>
+              Open to learning and career opportunities
+            </p>
           </div>
 
         </div>
-
       </div>
     </section>
   );

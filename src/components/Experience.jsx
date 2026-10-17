@@ -1,151 +1,119 @@
+
 import "./Experience.css";
 import {
   FaBriefcase,
-  FaMapMarkerAlt,
   FaCalendarAlt,
   FaCheckCircle,
   FaPython,
   FaDatabase,
-  FaChartBar,
+  FaBrain,
 } from "react-icons/fa";
-import { SiFastapi, SiStreamlit, SiPandas, SiNumpy } from "react-icons/si";
+import { SiFastapi, SiPandas, SiStreamlit } from "react-icons/si";
 import { motion } from "framer-motion";
+
+const experiences = [
+  {
+    role: "AI / ML Intern Trainee",
+    company: "CONTUS TECH PRIVATE LIMITED",
+    date: "May – June 2026",
+    summary:
+      "Gained hands-on experience in machine learning, data analytics, and recommendation systems.",
+    contributions: [
+      "Developed a Smart Retail Recommendation System",
+      "Built REST APIs using FastAPI",
+      "Created an interactive Streamlit dashboard",
+    ],
+    skills: [
+      { name: "Python", icon: <FaPython /> },
+      { name: "Pandas", icon: <SiPandas /> },
+      { name: "SQL", icon: <FaDatabase /> },
+      { name: "FastAPI", icon: <SiFastapi /> },
+      { name: "Streamlit", icon: <SiStreamlit /> },
+    ],
+  },
+  {
+    role: "Python with AI Intern",
+    company: "EWB EDUTECH PRIVATE LIMITED",
+    date: "September – October 2026",
+    summary:
+      "Practiced Python programming and AI concepts through exercises and project development.",
+    contributions: [
+      "Worked with Python functions and operators",
+      "Used NumPy and Pandas for data handling",
+      "Developed a Student Performance Analytics System",
+    ],
+    skills: [
+      { name: "Python", icon: <FaPython /> },
+      { name: "Artificial Intelligence", icon: <FaBrain /> },
+      { name: "NumPy", icon: <FaDatabase /> },
+      { name: "Pandas", icon: <SiPandas /> },
+    ],
+  },
+];
 
 const Experience = () => {
   return (
     <section className="experience" id="experience">
       <div className="experience-header">
-        <span className="experience-small">Career Journey</span>
-
-        <h2>Professional Experience</h2>
-
+        <span className="experience-small">MY CAREER JOURNEY</span>
+        <h2>
+          Professional <span>Experience</span>
+        </h2>
         <p>
-          My internship experience where I gained hands-on knowledge in
-          Artificial Intelligence, Machine Learning, Backend Development and
-          Business Intelligence.
+          Practical learning through internships and projects in AI,
+          Python, and Data Analytics.
         </p>
       </div>
 
-      <div className="timeline">
+      <div className="experience-timeline">
+        {experiences.map((exp, index) => (
+          <motion.article
+            className="experience-card"
+            key={exp.company}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.45, delay: index * 0.1 }}
+          >
+            <div className="experience-card-top">
+              <div className="experience-icon">
+                <FaBriefcase />
+              </div>
+              <span className="intern-tag">Internship</span>
+            </div>
 
-        <div className="timeline-line"></div>
+            <h3>{exp.role}</h3>
+            <h4>{exp.company}</h4>
 
-        <motion.div
-          className="timeline-icon"
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          transition={{ duration: .5 }}
-        >
-          <FaBriefcase />
-        </motion.div>
-
-        <motion.div
-          className="experience-card"
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: .7 }}
-        >
-
-          <div className="card-top">
-
-            <span className="intern-tag">
-              AI / ML Internship
-            </span>
-
-            <h3>AI / ML Intern</h3>
-
-            <h4>CONTUS TECH PRIVATE LIMITED</h4>
-
-            <div className="info-row">
-
+            <div className="experience-meta">
               <span>
-                <FaCalendarAlt />
-                May - June 2026
+                <FaCalendarAlt /> {exp.date}
               </span>
-
-              <span>
-                <FaMapMarkerAlt />
-                Chennai, India
-              </span>
-
             </div>
 
-          </div>
+            <p className="experience-summary">{exp.summary}</p>
 
-          <div className="summary">
-
-            Successfully completed a one-month internship focused on Machine
-            Learning, Recommendation Systems, Backend APIs and Business
-            Analytics while building real-world AI applications.
-
-          </div>
-
-          <div className="achievement-title">
-
-            Key Achievements
-
-          </div>
-
-          <div className="achievement-grid">
-
-            <div>
-              <FaCheckCircle />
-              Built Smart Retail Recommendation System
+            <h5 className="experience-subtitle">Key Contributions</h5>
+            <div className="achievement-grid">
+              {exp.contributions.map((item) => (
+                <div className="achievement-item" key={item}>
+                  <FaCheckCircle />
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
 
-            <div>
-              <FaCheckCircle />
-              Developed REST APIs using FastAPI
+            <h5 className="experience-subtitle">Technologies</h5>
+            <div className="tech-stack">
+              {exp.skills.map((skill) => (
+                <span className="tech-chip" key={skill.name}>
+                  {skill.icon}
+                  {skill.name}
+                </span>
+              ))}
             </div>
-
-            <div>
-              <FaCheckCircle />
-              Designed Interactive Streamlit Dashboard
-            </div>
-
-            <div>
-              <FaCheckCircle />
-              Performed Data Cleaning & Feature Engineering
-            </div>
-
-            <div>
-              <FaCheckCircle />
-              Implemented Apriori & FP-Growth Algorithms
-            </div>
-
-            <div>
-              <FaCheckCircle />
-              Model Training & Evaluation
-            </div>
-
-          </div>
-
-          <div className="tech-title">
-
-            Technologies Used
-
-          </div>
-
-          <div className="tech-stack">
-
-            <span><FaPython /> Python</span>
-
-            <span><SiPandas /> Pandas</span>
-
-            <span><SiNumpy /> NumPy</span>
-
-            <span><FaDatabase /> SQL</span>
-
-            <span><SiFastapi /> FastAPI</span>
-
-            <span><SiStreamlit /> Streamlit</span>
-
-            <span><FaChartBar /> Machine Learning</span>
-
-          </div>
-
-        </motion.div>
-
+          </motion.article>
+        ))}
       </div>
     </section>
   );

@@ -30,9 +30,9 @@ const Hero = () => {
 
         <p className="hero-eyebrow">M.Sc. DATA SCIENCE · ANALYTICS · AI</p>
 
-        <h>
+        <h1>
           Hi, I’m <span>Rudhra Roopini P</span>
-        </h>
+        </h1>
 
         <TypeAnimation
           sequence={["Data Analyst", 1800, "Business Analyst", 1800, "Power BI Analyst", 1800]}
@@ -49,9 +49,9 @@ const Hero = () => {
         </p>
 
         <blockquote className="hero-quote">
-          <span className="quote-mark">“</span>
+          <span className="quote"></span>
           <p>Turning data into insights, and insights into impact.</p>
-          <span className="quote-caption">A thought that guides my journey</span>
+          <span className="quote">A thought that guides my journey</span>
         </blockquote>
 
         <div className="hero-buttons">
